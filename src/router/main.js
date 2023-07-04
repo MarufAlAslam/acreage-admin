@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/login";
 import Dashboard from "../layouts/dashboard";
-import Main from "../components/main";
+import MailingList from "../pages/mailingList";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard",
-        element: <Main />,
+        element: <MailingList />,
       },
     ],
   },
