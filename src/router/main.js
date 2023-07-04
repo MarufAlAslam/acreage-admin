@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/login";
 import Dashboard from "../layouts/dashboard";
 import MailingList from "../pages/mailingList";
+import Surveys from "../pages/surveys";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <MailingList />,
+      },
+      {
+        path: "/dashboard/surveys",
+        element: <Surveys />,
       },
     ],
   },
