@@ -8,7 +8,7 @@ const Sidebar = () => {
       id: 1,
       name: "Mailing List",
       icon: BiSolidDashboard,
-      path: "/dashboard",
+      path: "/dashboard/mailings",
     },
     {
       id: 2,
@@ -47,6 +47,7 @@ const Sidebar = () => {
         <NavLink
           key={item.id}
           to={item.path}
+          end={item.end}
           className="block py-2 my-3 px-4 rounded hover:bg-[#1D2433] text-black hover:text-white"
         >
           <item.icon className="inline-block mr-2 mb-1" />

@@ -12,7 +12,7 @@ const Login = () => {
     const password = form.password.value;
 
     if (username === "admin" && password === "admin") {
-      navigator("/dashboard");
+      navigator("/dashboard/mailings");
     } else {
       alert("Invalid Credentials");
     }
