@@ -6,7 +6,7 @@ const Surveys = () => {
   const [survey, setSurvey] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/v1/survey", {
+    fetch("https://acreage-server.vercel.app/api/v1/survey", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

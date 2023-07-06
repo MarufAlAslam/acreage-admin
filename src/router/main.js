@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/surveys/details/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/api/v1/survey/${params.id}`),
+          fetch(`https://acreage-server.vercel.app/api/v1/survey/${params.id}`),
         element: <SurveyDetails />,
       },
     ],

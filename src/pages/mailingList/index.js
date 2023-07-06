@@ -5,7 +5,7 @@ const MailingList = () => {
   const [mailings, setMailings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/v1/mailingList", {
+    fetch("https://acreage-server.vercel.app/api/v1/mailingList", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
