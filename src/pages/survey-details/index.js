@@ -51,9 +51,22 @@ const SurveyDetails = () => {
         <div>
           <p className="font-bold">
             4. What are your primary reasons for considering property
-            renovations? (provide options)
+            renovations?
           </p>
-          <p>{data.primaryReason}</p>
+          {
+            <ul>
+              {/* check if primary reason is array or not */}
+              {Array.isArray(data.primaryReason) ? (
+                data.primaryReason.map((reason, index) => (
+                  <li key={index}>
+                    {index + 1}. {reason}
+                  </li>
+                ))
+              ) : (
+                <li>{data.primaryReason}</li>
+              )}
+            </ul>
+          }
         </div>
         <div>
           <p className="font-bold">
@@ -109,7 +122,21 @@ const SurveyDetails = () => {
             13. What are your perceived challenges regarding multifamily
             development? (provide options)
           </p>
-          <p>{data.challenges}</p>
+          {/* <p>{data.challenges}</p> */}
+          {
+            <ul>
+              {/* check if primary reason is array or not */}
+              {Array.isArray(data.challenges) ? (
+                data.challenges.map((challenge, index) => (
+                  <li key={index}>
+                    {index + 1}. {challenge}
+                  </li>
+                ))
+              ) : (
+                <li>{data.challenges}</li>
+              )}
+            </ul>
+          }
         </div>
         <div>
           <p className="font-bold">
