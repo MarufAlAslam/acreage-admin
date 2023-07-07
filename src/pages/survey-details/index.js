@@ -100,6 +100,16 @@ const SurveyDetails = () => {
           <p className="font-bold">9. Do you have a budget?</p>
           <p>{data.budget}</p>
         </div>
+
+        {
+          // check if budget is yes then show budget amount
+          data.budget === "Yes" && (
+            <div>
+              <p className="font-bold">9.1.Whats's the budget Amount</p>
+              <p>{data.amount}</p>
+            </div>
+          )
+        }
         <div>
           <p className="font-bold">
             10. Do you know the initial steps of renovating or redeveloping your
